@@ -1,48 +1,45 @@
 "use strict"
-
-let in_number = prompt('Введите число для перевода', 872);
-let in_notation = prompt('Введите систему счисления', 8);
-let fnumber = Number(in_number);
-let fnotation = Number(in_notation);
-if (Number.isNaN(fnumber) == true) {
+function zad1() {
+let fnumber = Number(prompt('Введите число для перевода', 872));
+let notation = Number(prompt('Введите систему счисления', 8));
+if (Number.isNaN(fnumber)) {
     alert('Неправильный ввод');
 }
-else if (Number.isNaN(fnotation) == true) {
+else if (Number.isNaN(notation)) {
     alert('Некорректный ввод');
 }
 else {
-    let parsed = fnumber.toString(fnotation);
-    alert(parsed);
+    let parsedd = fnumber.toString(notation)
+    alert(parsedd);
 }
+};
+zad1();
+function zad2() {
 alert('Задача №2');
-let adnum1 = prompt('Введите число', 100);
-let adnum2 = prompt('Введите второе число', 5);
-let plnum1 = Number(adnum1);
-let plnum2 = Number(adnum2);
-if (Number.isNaN(plnum1) == true) {
+let num1 = Number(prompt('Введите число', 100));
+let num2 = Number(prompt('Введите второе число', 5));
+if (Number.isNaN(num1)) {
     alert('Некорректный ввод');
 }
-else if (Number.isNaN(plnum2) == true) {
+else if (Number.isNaN(num2)) {
     alert('Некорректный ввод');
 }
 else {
-    let pls = (plnum1 + plnum2);
-    let del = (plnum1 / plnum2);
-    console.log(`Ответ: ${pls}, ${del}`);
+    console.log(`Ответ: ${num1 + num2}, ${num1 / num2}`);
 } 
-
+}
+zad2();
+function zad3() {
 alert('Задача №3');
-let arrl = prompt('Введи длину массива', 5);
-let arr_len = Number(arrl);
-if (Number.isNaN(arr_len) == true) {
+let arr_length = Number(prompt('Введи длину массива', 5));
+if (Number.isNaN(arr_length)) {
     alert('Некорректный ввод!');
 }
 else { 
     let arr = [];
-    while(arr_len > 0) {
-        arr.push(arr_len--);
+    while(arr_length > 0) {
+        arr.push(arr_length--);
     }
-console.log(arr);
 for (let i = 1; i <= arr.length; i++) {
     if ((confirm(`${arr[i-1]}, продолжить?`)) == false) {
         alert(`Итерация закончилась на числе ${arr[i-1]}`);
@@ -54,3 +51,5 @@ for (let i = 1; i <= arr.length; i++) {
         }
     }
  }
+}
+zad3();
